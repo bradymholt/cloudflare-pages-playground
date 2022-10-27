@@ -9,8 +9,8 @@ export async function onRequest(context) {
     data, // arbitrary space for passing data between middlewares
   } = context;
 
-  const counterValue = await env["playground-var"].get("counter");
+  let counterValue = await env["playground-var"].get("counter");
   const nextValue = counterValue++;
-  await env["playground-var"].put("counter", counterValue++);
+  await env["playground-var"].put("counter", nextValue);
   return new Response(nextValue.toString());
 }
