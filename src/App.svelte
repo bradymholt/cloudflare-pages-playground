@@ -1,29 +1,23 @@
 <script>
-  import svelteLogo from "./assets/svelte.svg";
+  import logo from "./assets/cloudflare-pages.svg";
   import Counter from "./lib/Counter.svelte";
 </script>
 
 <main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
+  <div>    
+    <a href="https://pages.cloudflare.com/" target="_blank">
+      <img src={logo} class="logo svelte" alt="Logo" />
     </a>
   </div>
-  <h1>Vite + Svelte</h1>
+  <h1>Cloudflare Pages Demo</h1>
 
   <div class="card">
     <Counter />
   </div>
 
   <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank">SvelteKit</a>, the official Svelte app
-    framework powered by Vite!
+    Check out the <a href="https://developers.cloudflare.com/pages" target="_blank">documentation</a>.    
   </p>
-
-  <p class="read-the-docs">Click on the Vite and Svelte logos to learn more</p>
 </main>
 
 <style>
