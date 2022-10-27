@@ -1,5 +1,5 @@
 <script>
-  let count = null;
+  let count = 0;
   fetch("api/counter")
     .then((resp) => resp.text())
     .then((counterValue) => {
