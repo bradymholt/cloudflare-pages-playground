@@ -10,7 +10,7 @@ export async function onRequest(context) {
   } = context;
 
   let counterValue = await env["playground-var"].get("counter") || 0;
-  const nextValue = counterValue++;
-  await env["playground-var"].put("counter", nextValue);
-  return new Response(nextValue.toString());
+  counterValue++;  
+  await env["playground-var"].put("counter", counterValue);
+  return new Response(counterValue.toString());
 }
