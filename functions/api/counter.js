@@ -9,8 +9,12 @@ export async function onRequest(context) {
     data, // arbitrary space for passing data between middlewares
   } = context;
 
-  let counterValue = await env["playground-var"].get("counter") || 0;
-  counterValue++;  
+  let counterValue = (await env["playground-var"].get("counter")) || 0;
+  counterValue++;
   await env["playground-var"].put("counter", counterValue);
-  return new Response(counterValue.toString());
+  return new Response(counterValue.toString(), {
+    headers: {
+      "Content-Type": "text",
+    },
+  });
 }
